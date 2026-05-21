@@ -7,9 +7,81 @@
 <style>
 *{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f8fafc;color:#0f172a}button,input,select,textarea{font:inherit}main{max-width:1280px;margin:0 auto;padding:32px 20px 56px}header{display:flex;justify-content:space-between;gap:20px;align-items:flex-end;margin-bottom:18px}h1{font-size:clamp(32px,5vw,56px);line-height:1;margin:4px 0 10px}h2,h3,p{margin:0}.eyebrow{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#047857}.primary,.secondary,.actions button{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:16px;background:#059669;color:white;padding:10px 14px;font-weight:700;cursor:pointer}.secondary,.actions button{background:white;color:#334155;border:1px solid #e2e8f0}.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-start}.print-control{display:flex;flex-direction:column;gap:6px}.pdf-note{font-size:12px;color:#64748b;font-style:italic;max-width:260px;line-height:1.35}.quote-toolbar{display:flex;justify-content:flex-start;margin:18px 0}.panel,.card,.proposal{background:white;border:1px solid #e2e8f0;border-radius:28px;box-shadow:0 10px 30px rgba(15,23,42,.05)}.panel{padding:18px;margin-bottom:18px}.panel h2{font-size:18px;margin-bottom:12px}.customer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.toggles{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.toggle{border:1px solid #cbd5e1;border-radius:999px;background:#fff;color:#475569;padding:7px 11px;font-size:12px;font-weight:700;cursor:pointer}.toggle.on{border-color:#86efac;background:#ecfdf5;color:#047857}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{padding:20px}.recommended{border-color:#34d399;box-shadow:0 0 0 3px #d1fae5}.cardtop{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px}.cardtop h3{font-size:22px}.cardtop p,.muted{color:#64748b}.actions{display:flex;gap:8px;flex-wrap:wrap}.actions button{padding:8px 10px}.inputs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.field{display:flex;flex-direction:column;gap:5px;color:#64748b;font-size:12px;font-weight:700}.field input,.field select,.field textarea{width:100%;border:1px solid #cbd5e1;border-radius:12px;background:white;color:#0f172a;padding:9px 10px}.field textarea{min-height:82px;resize:vertical}.wide{grid-column:1/-1}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0;padding:14px;border-radius:20px;background:#f8fafc}.metric span{display:block;font-size:12px;color:#64748b}.metric strong{display:block;margin-top:2px;font-size:16px}.metric .good{color:#047857}.stips{margin-bottom:14px}.stips b{display:flex;align-items:center;gap:8px;margin-bottom:10px}.stips div{display:flex;flex-wrap:wrap;gap:7px}.stips button{border:1px solid #e2e8f0;border-radius:999px;background:white;color:#64748b;padding:6px 10px;font-size:12px;cursor:pointer}.stips button.active{border-color:#86efac;background:#ecfdf5;color:#047857}.badge{display:inline-block;margin-left:8px;border-radius:999px;background:#059669;color:white;font-size:11px;padding:4px 8px}.proposal{display:none;margin-top:18px;padding:28px}.proposal.show{display:block}.proposal-head{display:flex;justify-content:space-between;gap:18px;border-bottom:2px solid #e2e8f0;padding-bottom:18px;margin-bottom:18px}.proposal h2{font-size:30px}.proposal-customer{font-size:14px;color:#475569;line-height:1.6}.rec{color:#047857;font-weight:800}.confidential{display:inline-block;margin-top:10px;border:1px solid #fecaca;background:#fef2f2;color:#991b1b;border-radius:999px;padding:5px 10px;font-size:12px;font-weight:800;letter-spacing:.02em}.proposal-table{width:100%;border-collapse:separate;border-spacing:0;margin-top:18px;table-layout:fixed;border:1px solid #bbf7d0;border-radius:14px;overflow:hidden}.proposal-table th,.proposal-table td{text-align:left;border-bottom:1px solid #e2e8f0;padding:11px 10px;font-size:14px;vertical-align:top;white-space:normal;overflow-wrap:anywhere;word-break:normal}.proposal-table th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:#64748b;background:#f0fdf4}.proposal-table .field-col{font-weight:800;color:#475569;width:190px;overflow-wrap:normal}.proposal-table .row-label{color:#64748b;font-weight:650}.proposal-table th.quote-col{text-align:left}.proposal-table .quote-cell,.proposal-table th.quote-col{border-left:1px solid #bbf7d0}.proposal-table .recommended-col{background:#ecfdf5}.proposal-table th.recommended-col{color:#047857}.proposal-table tbody tr:last-child td{border-bottom:0}.proposal-notes{margin-top:18px;padding:16px;border-radius:18px;background:#f8fafc;color:#334155}.proposal-disclaimer{margin-top:8px;font-size:11px;color:#64748b;line-height:1.4}@media(max-width:900px){header,.proposal-head{display:block}.toolbar{margin-top:12px}.grid{grid-template-columns:1fr}.inputs,.metrics,.customer-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){main{padding:20px 12px}.inputs,.metrics,.customer-grid{grid-template-columns:1fr}.cardtop{display:block}.actions{margin-top:10px}.proposal-table{display:block;overflow-x:auto}}
 @media print{body{background:white}main{max-width:none;padding:0}.app-only,header,.panel,.grid{display:none!important}.proposal{display:block!important;box-shadow:none;border:0;border-radius:0;padding:0}.proposal-head{break-inside:avoid}.proposal-table th,.proposal-table td{font-size:11px;padding:8px 6px}.no-print{display:none!important}}
+
+/* Sales tool shell + two-page navigation */
+:root{--lt-green:#059669;--lt-green-dark:#047857;--lt-green-soft:#ecfdf5;--lt-ink:#0f172a;--lt-muted:#64748b;--lt-border:#e2e8f0;--lt-bg:#f8fafc;}
+body{background:#f8fafc;}
+.shell{min-height:100vh;display:grid;grid-template-columns:230px minmax(0,1fr);}
+.sidebar{position:sticky;top:0;height:100vh;background:#0f172a;color:white;padding:22px 16px;display:flex;flex-direction:column;gap:18px;box-shadow:10px 0 30px rgba(15,23,42,.10);z-index:20;}
+.sidebar .brand{font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#86efac;}
+.sidebar h2{font-size:22px;line-height:1.1;margin:4px 0 8px;color:#fff;}
+.sidebar p{font-size:12px;line-height:1.45;color:#cbd5e1;}
+.side-divider{height:1px;background:#334155;margin:6px 0;}
+.nav-btn{width:100%;border:1px solid #334155;border-radius:14px;background:#1e293b;color:#e2e8f0;padding:13px 14px;text-align:left;font-weight:800;cursor:pointer;box-shadow:none;display:block;}
+.nav-btn.active{background:#dcfce7;color:#065f46;border-color:#86efac;}
+.sidebar .helper{margin-top:auto;border-top:1px solid #334155;padding-top:14px;font-size:11px;color:#94a3b8;}
+.content{min-width:0;width:100%;}
+.page{display:none;}
+.page.active{display:block;}
+.term-page main{max-width:1280px;}
+/* LOC page, restyled to match the term loan tool */
+.loc-page{padding:32px 20px 56px;}
+.loc-container{width:100%;max-width:1500px;margin:0 auto;}
+.loc-header{display:flex;justify-content:space-between;gap:20px;align-items:flex-end;margin-bottom:18px;}
+.loc-header h1{font-size:clamp(32px,4vw,48px);line-height:1;margin:4px 0 10px;color:#0f172a;}
+.loc-header p{color:#475569;}
+.loc-tag{display:inline-flex;align-items:center;border:1px solid #e2e8f0;border-radius:999px;padding:8px 12px;background:#fff;color:#64748b;font-size:13px;}
+.loc-layout{display:grid;grid-template-columns:330px minmax(0,1fr);gap:18px;align-items:start;}
+.loc-card,.loc-table-card,.loc-metric{background:#fff;border:1px solid #e2e8f0;border-radius:22px;box-shadow:0 10px 30px rgba(15,23,42,.05);overflow:hidden;}
+.loc-card h2{font-size:18px;margin:0;padding:18px 20px;border-bottom:1px solid #e2e8f0;background:#fbfcfe;}
+.loc-body{padding:18px 20px;}
+.loc-field{margin-bottom:14px;display:flex;flex-direction:column;gap:6px;color:#64748b;font-size:12px;font-weight:700;}
+.loc-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.loc-field input,.loc-field select{width:100%;height:42px;border:1px solid #cbd5e1;border-radius:12px;padding:0 12px;font-size:14px;background:#fff;color:#0f172a;}
+.loc-field input[readonly]{background:#f8fafc;color:#334155;font-weight:800;}
+.loc-field input:focus,.loc-field select:focus{outline:3px solid rgba(5,150,105,.14);border-color:#059669;}
+.loc-hint{font-size:11px;color:#64748b;font-weight:500;line-height:1.35;}
+.loc-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;align-items:center;}
+.loc-primary,.loc-secondary{border:0;border-radius:14px;padding:10px 14px;font-weight:800;cursor:pointer;background:#059669;color:#fff;box-shadow:0 5px 14px rgba(5,150,105,.16);}
+.loc-secondary{background:#fff;color:#334155;border:1px solid #e2e8f0;box-shadow:none;}
+.loc-full{width:100%;justify-content:center;display:inline-flex;}
+.loc-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:18px;}
+.loc-metric{padding:16px;}
+.loc-metric span{display:block;font-size:12px;color:#64748b;font-weight:700;margin-bottom:8px;}
+.loc-metric strong{font-size:22px;letter-spacing:-.02em;color:#0f172a;}
+.loc-note{background:#ecfdf5;border:1px solid #bbf7d0;border-radius:18px;padding:12px 14px;margin-bottom:18px;font-size:13px;color:#134e4a;}
+.loc-table-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 18px;border-bottom:1px solid #e2e8f0;background:#fbfcfe;}
+.loc-table-head h2{margin:0;font-size:18px;}
+.loc-small{font-size:12px;color:#64748b;margin-top:2px;}
+.loc-table-wrap{max-height:650px;overflow-y:auto;overflow-x:visible;}
+.loc-table{width:100%;border-collapse:collapse;font-size:12px;table-layout:auto;}
+.loc-table th,.loc-table td{border-bottom:1px solid #edf1f6;padding:9px 7px;text-align:right;white-space:nowrap;}
+.loc-table th{position:sticky;top:0;background:#f8fafc;color:#334155;font-size:11px;text-transform:uppercase;letter-spacing:.025em;z-index:1;}
+.loc-table th:first-child,.loc-table td:first-child{text-align:left;}
+.loc-table tr:hover td{background:#fcfcfd;}
+.loc-print-title{display:none;}
+@media(max-width:1180px){.loc-layout{grid-template-columns:1fr}.loc-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.loc-table-wrap{overflow-x:auto}.loc-table{min-width:980px}}
+@media(max-width:900px){.shell{grid-template-columns:1fr}.sidebar{position:relative;height:auto}.loc-header{display:block}.loc-tag{margin-top:12px}.term-page main,.loc-page{padding:20px 12px}}
+@media print{.sidebar,.loc-page:not(.active){display:none!important}.shell{display:block}.content{width:100%}.loc-page{padding:0}.loc-container{max-width:none}.loc-header,.loc-card,.loc-metrics,.loc-note{display:none!important}.loc-table-card{box-shadow:none;border:0;border-radius:0}.loc-table-head{display:block;border:0;padding:0 0 10px;background:#fff}.loc-table-head .loc-actions{display:none!important}.loc-print-title{display:block;font-size:20px;font-weight:800;margin:0 0 6px;color:#000}.loc-table-wrap{max-height:none;overflow:visible}.loc-table{font-size:9px;border-collapse:collapse;width:100%;min-width:0}.loc-table th{position:static;background:#f1f1f1;color:#000}.loc-table th,.loc-table td{padding:4px 5px;border:1px solid #aaa;color:#000}}
+
 </style>
 </head>
 <body>
+<div class="shell">
+  <aside class="sidebar">
+    <div>
+      <div class="brand">LendingTree</div>
+      <h2>LT Sales Tool</h2>
+      <p>Select a calculator below. Each tool keeps its own inputs, outputs, and export options.</p>
+    </div>
+    <div class="side-divider"></div>
+    <nav>
+      <button class="nav-btn active" id="navTerm">Term Loan Calc</button>
+      <button class="nav-btn" id="navLoc" style="margin-top:10px">LOC Calc</button>
+    </nav>
+  </aside>
+  <div class="content">
+    <section id="termPage" class="page term-page active">
 <main>
 <header class="app-only"><div><p class="eyebrow">LendingTree</p><h1>SMB Financing Comparison Tool</h1><p>Compare SMB financing options and generate a customer-facing pre-approval summary.</p></div><div class="toolbar"><button class="secondary" id="toggleProposal">Preview proposal</button><div class="print-control"><button class="primary" id="printProposal">Print / Save PDF</button><p class="pdf-note">For best results, uncheck Headers & Footers in print settings.</p></div></div></header>
 <section class="panel app-only"><h2>Customer details</h2><div class="customer-grid"><label class="field"><span>Customer name</span><input id="customerName" placeholder="Contact name"></label><label class="field"><span>Business name</span><input id="businessName" placeholder="Business name"></label><label class="field"><span>Prepared by</span><input id="preparedBy" placeholder="Your name"></label><label class="field"><span>Proposal date</span><input id="proposalDate" type="date"></label></div><h2 style="margin-top:18px">Customer proposal visibility</h2><p class="muted">Toggle fields on or off before printing or saving as PDF.</p><div class="toggles" id="visibilityToggles"></div></section>
@@ -17,6 +89,62 @@
 <section class="quote-toolbar app-only"><button class="primary" id="addQuote">+ Add quote</button></section>
 <section class="grid app-only" id="quotes"></section>
 </main>
+
+    </section>
+
+<section id="locPage" class="page loc-page">
+  <div class="loc-container">
+    <div class="loc-header">
+      <div><p class="eyebrow">LENDINGTREE</p><h1>Line of Credit Amortization Calculator</h1><p>Generate a customer-ready LOC payment schedule and export it to CSV, Excel, or PDF.</p></div>
+      <div class="loc-tag">Customer schedule export-ready</div>
+    </div>
+    <div class="loc-layout">
+      <section class="loc-card">
+        <h2>Calculator Inputs</h2>
+        <div class="loc-body">
+          <label class="loc-field"><span>Customer Name</span><input id="locCustomerName" value="Customer" /></label>
+          <div class="loc-row">
+            <label class="loc-field"><span>Planned Draw Date</span><input id="locDrawDate" type="date" /></label>
+            <label class="loc-field"><span>First Payment Due Date</span><input id="locFirstDueDate" type="date" /><span class="loc-hint">Auto-calculated; editable.</span></label>
+          </div>
+          <div class="loc-row">
+            <label class="loc-field"><span>APR</span><input id="locApr" type="number" step="0.01" value="50" /></label>
+            <label class="loc-field"><span>Planned Draw Amount</span><input id="locAmount" type="number" step="100" value="50000" /></label>
+          </div>
+          <div class="loc-row">
+            <label class="loc-field"><span>Term Length</span><select id="locTerm"><option value="12">12 months</option><option value="18" selected>18 months</option><option value="24">24 months</option></select></label>
+            <label class="loc-field"><span>Payment Frequency</span><select id="locFrequency"><option value="Weekly">Weekly</option><option value="Monthly" selected>Monthly</option></select></label>
+          </div>
+          <label class="loc-field"><span>Periodic Rate</span><input id="locPeriodicRate" type="text" readonly value="" /><span class="loc-hint">Calculated from APR ÷ 52 for weekly or APR ÷ 12 for monthly.</span></label>
+          <button class="loc-primary loc-full" id="locRecalcBtn">Recalculate Schedule</button>
+          <div class="loc-actions"><button class="loc-secondary" id="locResetDatesBtn">Reset Dates</button></div>
+        </div>
+      </section>
+      <main class="loc-main">
+        <section class="loc-metrics" id="locMetrics"></section>
+        <div class="loc-note" id="locCalcNote"></div>
+        <section class="loc-table-card" id="locPrintArea">
+          <div class="loc-table-head">
+            <div>
+              <div class="loc-print-title">Amortization Schedule</div>
+              <h2>Amortization Schedule</h2>
+              <div class="loc-small" id="locScheduleSubhead"></div>
+            </div>
+            <div class="loc-actions">
+              <button class="loc-secondary" id="locCsvBtn">Export CSV</button>
+              <button class="loc-secondary" id="locExcelBtn">Export Excel</button>
+              <button class="loc-primary" id="locPrintBtn">Print / Save PDF</button>
+            </div>
+          </div>
+          <div class="loc-table-wrap"><table class="loc-table" id="locScheduleTable"><thead><tr><th>Payment #</th><th>Payment Due Date</th><th>Payment</th><th>Beginning Principal</th><th>Interest Paid</th><th>Principal Paid</th><th>Ending Principal</th><th>Cumulative Int</th></tr></thead><tbody></tbody></table></div>
+        </section>
+      </main>
+    </div>
+  </div>
+</section>
+
+  </div>
+</div>
 <script>
 const lenderConfig=[{lender:'OnDeck',prepayType:'Standard',standardPrepayPct:.25,has100Prepay:true},{lender:'Forward Financing',prepayType:'Custom Prepay',standardPrepayPct:null,has100Prepay:false},{lender:'Kapitus',prepayType:'Standard',standardPrepayPct:.1,has100Prepay:true},{lender:'Mulligan',prepayType:'Standard',standardPrepayPct:.5,has100Prepay:true},{lender:'Byzfunder',prepayType:'Custom Prepay',standardPrepayPct:null,has100Prepay:false},{lender:'Bitty Advance',prepayType:'Custom Prepay',standardPrepayPct:null,has100Prepay:false},{lender:'Expansion Capital',prepayType:'Custom Prepay',standardPrepayPct:null,has100Prepay:false},{lender:'Pearl Capital',prepayType:'Custom Prepay',standardPrepayPct:null,has100Prepay:false},{lender:'CAN Capital',prepayType:'Standard',standardPrepayPct:.3,has100Prepay:false},{lender:'Vox Funding',prepayType:'Custom Prepay',standardPrepayPct:null,has100Prepay:false},{lender:'Samson',prepayType:'Custom Prepay',standardPrepayPct:null,has100Prepay:false},{lender:'Peac Solutions',prepayType:'Standard',standardPrepayPct:.3,has100Prepay:true},{lender:'BriteCap',prepayType:'Custom Prepay',standardPrepayPct:null,has100Prepay:false},{lender:'Bluevine',prepayType:'Standard',standardPrepayPct:null,has100Prepay:true},{lender:'Fora Financial',prepayType:'Custom Prepay',standardPrepayPct:null,has100Prepay:false},{lender:'BHG Financial',prepayType:'Custom Prepay',standardPrepayPct:null,has100Prepay:false},{lender:'Biz2Credit',prepayType:'Custom Prepay',standardPrepayPct:null,has100Prepay:false},{lender:'Rapid Finance',prepayType:'Custom Prepay',standardPrepayPct:null,has100Prepay:false},{lender:'Idea Financial',prepayType:'Custom Prepay',standardPrepayPct:null,has100Prepay:false},{lender:'Quantum Solutions',prepayType:'Custom Prepay',standardPrepayPct:null,has100Prepay:false}];
 const stips=['Drivers License','Voided Check','Bank Verification','Month to Date Transactions','ID Verification','Tax Return','Aging A/R','Aging A/P','YTD P&L','Year End P&L','YTD Balance Sheet','Year End Balance Sheet','8821','Virtual Site Inspection','Payoff Letter','Transfer Account Bank Statements','Merchant Interview','Funding call','Additional bank statements','Online Checkout'];
@@ -48,5 +176,113 @@ document.addEventListener('focusout',e=>{const card=e.target.closest('.card');if
 document.addEventListener('click',e=>{const card=e.target.closest('.card');if(e.target.dataset.toggle){visible[e.target.dataset.toggle]=!visible[e.target.dataset.toggle];render();return}if(e.target.id==='toggleProposal'){document.getElementById('proposal').classList.toggle('show');e.target.textContent=document.getElementById('proposal').classList.contains('show')?'Hide proposal':'Preview proposal';return}if(e.target.id==='printProposal'){document.getElementById('proposal').classList.add('show');window.print();return}if(e.target.id==='addQuote'){quotes.push(blankQuote());render();return}if(!card)return;if(e.target.dataset.act==='recommend'){const target=quotes.find(q=>q.id===card.dataset.id);const makeRecommended=!(target&&target.recommended);quotes=quotes.map(q=>({...q,recommended:makeRecommended&&q.id===card.dataset.id}));render()}if(e.target.dataset.act==='duplicate'){const source=quotes.find(q=>q.id===card.dataset.id);if(source){const copy={...source,id:uid(),recommended:false,stipulations:{...(source.stipulations||{})}};const idx=quotes.findIndex(q=>q.id===card.dataset.id);quotes=[...quotes.slice(0,idx+1),copy,...quotes.slice(idx+1)];render()}return}if(e.target.dataset.act==='remove'&&quotes.length>1){quotes=quotes.filter(q=>q.id!==card.dataset.id);render()}if(e.target.dataset.stip){quotes=quotes.map(q=>q.id===card.dataset.id?{...q,stipulations:{...q.stipulations,[e.target.dataset.stip]:!q.stipulations?.[e.target.dataset.stip]}}:q);render()}});
 render();
 </script>
+
+<script>
+(function(){
+const L = id => document.getElementById(id);
+const locCurrency = new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'});
+const locPercent = new Intl.NumberFormat('en-US',{style:'percent',minimumFractionDigits:2,maximumFractionDigits:2});
+let locCurrentSchedule = [];
+function locIso(d){ return d.toISOString().slice(0,10); }
+function locParseDate(v){ const [y,m,d]=v.split('-').map(Number); return new Date(y,m-1,d); }
+function locAddDays(d,days){ const x=new Date(d); x.setDate(x.getDate()+days); return x; }
+function locAddMonths(d,months){ const x=new Date(d); const day=x.getDate(); x.setMonth(x.getMonth()+months); if(x.getDate()<day) x.setDate(0); return x; }
+function locFmtDate(d){ return d.toLocaleDateString('en-US',{year:'numeric',month:'2-digit',day:'2-digit'}); }
+function locMoney(n){ return locCurrency.format(Math.abs(n)<0.005?0:n); }
+function locCalcFirstDue(drawDate, frequency){
+  const d = new Date(drawDate);
+  if(frequency === 'Weekly'){
+    const excelWeekday = d.getDay()+1;
+    return locAddDays(d, (4 - excelWeekday + 7) % 7);
+  }
+  if(d.getDate() <= 19) return new Date(d.getFullYear(), d.getMonth(), 26);
+  return new Date(d.getFullYear(), d.getMonth()+1, 26);
+}
+function locPayment(rate, principal, count){
+  if(count <= 0) return 0;
+  if(Math.abs(rate) < 1e-12) return principal / count;
+  return (rate * principal * Math.pow(1+rate,count)) / (Math.pow(1+rate,count)-1);
+}
+function locBuildSchedule(){
+  const customer = L('locCustomerName').value.trim() || 'Customer';
+  const apr = Number(L('locApr').value || 0) / 100;
+  const amount = Number(L('locAmount').value || 0);
+  const termMonths = Number(L('locTerm').value || 12);
+  const frequency = L('locFrequency').value;
+  const drawDate = locParseDate(L('locDrawDate').value);
+  const firstDue = locParseDate(L('locFirstDueDate').value);
+  const periodicRate = apr / (frequency === 'Weekly' ? 52 : 12);
+  L('locPeriodicRate').value = locPercent.format(periodicRate);
+  const payments = frequency === 'Weekly' ? Math.round(termMonths * (52/12)) : termMonths;
+  const pmt = locPayment(periodicRate, amount, payments);
+  let rows = [], principal = amount, cumulativeInterest = 0;
+  for(let i=1;i<=payments;i++){
+    const dueDate = i === 1 ? new Date(firstDue) : (frequency === 'Weekly' ? locAddDays(firstDue, 7*(i-1)) : locAddMonths(firstDue, i-1));
+    const beginning = principal;
+    const interest = beginning * periodicRate;
+    const principalPaid = i === payments ? beginning : Math.min(pmt - interest, beginning);
+    const actualPayment = interest + principalPaid;
+    principal = beginning - principalPaid;
+    if(Math.abs(principal)<0.005) principal = 0;
+    cumulativeInterest += interest;
+    rows.push({number:i,dueDate,payment:actualPayment,beginning,interest,principalPaid,ending:principal,cumulativeInterest});
+  }
+  const totalInterest = rows.reduce((s,r)=>s+r.interest,0);
+  const totalPayback = amount + totalInterest;
+  locCurrentSchedule = rows;
+  L('locMetrics').innerHTML = [
+    ['Payment', locMoney(pmt)], ['Total Payback', locMoney(totalPayback)], ['Total Interest Cost', locMoney(totalInterest)], ['Simple Interest', locPercent.format(amount ? totalInterest/amount : 0)]
+  ].map(([k,v])=>`<div class="loc-metric"><span>${k}</span><strong>${v}</strong></div>`).join('');
+  L('locCalcNote').innerHTML = `<strong>${customer}</strong> · ${frequency} payments · ${termMonths}-month term · ${payments} total payments · Periodic rate ${locPercent.format(periodicRate)} · Draw date ${locFmtDate(drawDate)}`;
+  L('locScheduleSubhead').textContent = `${customer} | ${frequency} | ${termMonths}-month term | Draw ${locMoney(amount)} | APR ${locPercent.format(apr)} | First due ${locFmtDate(firstDue)}`;
+  locRenderTable(rows);
+}
+function locRenderTable(rows){
+  L('locScheduleTable').querySelector('tbody').innerHTML = rows.map(r=>`<tr><td>${r.number}</td><td>${locFmtDate(r.dueDate)}</td><td>${locMoney(r.payment)}</td><td>${locMoney(r.beginning)}</td><td>${locMoney(r.interest)}</td><td>${locMoney(r.principalPaid)}</td><td>${locMoney(r.ending)}</td><td>${locMoney(r.cumulativeInterest)}</td></tr>`).join('');
+}
+function locScheduleAsRows(){
+  return [['Payment #','Payment Due Date','Payment','Beginning Principal','Interest Paid','Principal Paid','Ending Principal','Cumulative Interest'], ...locCurrentSchedule.map(r=>[r.number,locFmtDate(r.dueDate),r.payment.toFixed(2),r.beginning.toFixed(2),r.interest.toFixed(2),r.principalPaid.toFixed(2),r.ending.toFixed(2),r.cumulativeInterest.toFixed(2)])];
+}
+function locDownload(filename, content, type){
+  const blob = new Blob([content], {type}); const url = URL.createObjectURL(blob); const a = document.createElement('a');
+  a.href=url; a.download=filename; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+}
+function locExportCSV(){
+  const csv = locScheduleAsRows().map(row => row.map(v => `"${String(v).replaceAll('"','""')}"`).join(',')).join('\n');
+  locDownload('line-of-credit-amortization-schedule.csv', csv, 'text/csv;charset=utf-8;');
+}
+function locExportExcel(){
+  const rows = locScheduleAsRows();
+  const html = `<html><head><meta charset="utf-8"></head><body><table>${rows.map((row,i)=>`<tr>${row.map(v=>i===0?`<th>${v}</th>`:`<td>${v}</td>`).join('')}</tr>`).join('')}</table></body></html>`;
+  locDownload('line-of-credit-amortization-schedule.xls', html, 'application/vnd.ms-excel;charset=utf-8;');
+}
+function locSetDefaultDates(){
+  const today = new Date(); L('locDrawDate').value = locIso(today); L('locFirstDueDate').value = locIso(locCalcFirstDue(today, L('locFrequency').value));
+}
+['locApr','locAmount','locTerm','locFrequency','locDrawDate','locFirstDueDate','locCustomerName'].forEach(id => L(id).addEventListener('input', () => { if(id==='locFrequency' || id==='locDrawDate') L('locFirstDueDate').value = locIso(locCalcFirstDue(locParseDate(L('locDrawDate').value), L('locFrequency').value)); locBuildSchedule(); }));
+L('locRecalcBtn').addEventListener('click', locBuildSchedule);
+L('locResetDatesBtn').addEventListener('click', () => { locSetDefaultDates(); locBuildSchedule(); });
+L('locCsvBtn').addEventListener('click', locExportCSV);
+L('locExcelBtn').addEventListener('click', locExportExcel);
+L('locPrintBtn').addEventListener('click', () => window.print());
+locSetDefaultDates(); locBuildSchedule();
+})();
+</script>
+
+
+<script>
+(function(){
+  function showPage(page){
+    document.getElementById('termPage').classList.toggle('active', page === 'term');
+    document.getElementById('locPage').classList.toggle('active', page === 'loc');
+    document.getElementById('navTerm').classList.toggle('active', page === 'term');
+    document.getElementById('navLoc').classList.toggle('active', page === 'loc');
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+  document.getElementById('navTerm').addEventListener('click', () => showPage('term'));
+  document.getElementById('navLoc').addEventListener('click', () => showPage('loc'));
+})();
+</script>
+
 </body>
 </html>
